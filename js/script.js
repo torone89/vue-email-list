@@ -6,8 +6,7 @@ console.log("JS")
 
 console.log('Vue ok', Vue)
 
-// Bonus
-// Far comparire gli indirizzi email solamente quando sono stati tutti generati.
+
 
 new Vue({
     el: '#root  ',
