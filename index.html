@@ -44,10 +44,17 @@
 <body>
 
     <!-- VUE -->
-    <div id="root">
+    <div id="root" class="text-center">
 
+        <h1 class="fw-bold m-4">Vue Email List</h1>
 
+        <ul class="list-group">
+            <li v-for="mail in this.mailList" class="mb-2">
+                {{ mail }}
 
+            </li>
+        </ul>
+        <button @click="generateTenMail">Genera Email Random</button>
     </div>
     <!-- CHIUSURA VUE -->
 
