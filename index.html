@@ -55,7 +55,13 @@
                 {{ mail }}
             </li>
         </ul>
-        <button @click="generateTenMail">Genera Email Random</button>
+        <div class="button">
+            <!-- Mostro il Bottone Genera solo quando l'array è Vuoto -->
+            <button @click="generateTenMail" v-show="mailList.length == 0">Genera Nuove
+                Email</button>
+            <button @click="clearMail">Elimina Email</button>
+        </div>
+    </div>
     </div>
     <!-- CHIUSURA VUE -->
 

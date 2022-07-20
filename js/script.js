@@ -21,13 +21,18 @@ new Vue({
             for (let i = 0; i < 10; i++) {
                 axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
 
-                    .then((res) => {
-                        const result = res.data.response;
+                    .then((response) => {
+
+                        const result = response.data.response;
                         this.mailList.push(result)
 
                     });
             };
         },
+        // FUNZUONE PER ELIMINARE L'ARRAY E PORTARMELO A 0 Email Create
+        clearMail: function () {
+            this.mailList = [];
+        }
     },
 
     created() {
