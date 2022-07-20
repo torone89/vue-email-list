@@ -48,7 +48,7 @@
 
         <h1 class="fw-bold m-4">Vue Email List</h1>
 
-        <ul class="list-group">
+        <ul class="list-group mb-2">
             <!-- // Bonus
             // Far comparire gli indirizzi email solamente quando sono stati tutti generati. -->
             <li v-for="mail in this.mailList" v-if="mailList.length == 10" class="mb-2">
@@ -59,7 +59,7 @@
             <!-- Mostro il Bottone Genera solo quando l'array è Vuoto -->
             <button @click="generateTenMail" v-show="mailList.length == 0">Genera Nuove
                 Email</button>
-            <button @click="clearMail">Elimina Email</button>
+            <button @click="clearMail" v-show="mailList.length == 10">Elimina Email</button>
         </div>
     </div>
     </div>
