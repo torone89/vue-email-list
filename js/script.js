@@ -12,6 +12,10 @@ new Vue({
     el: '#root  ',
     data: {
         mailList: [],
+        emailNumber: 10,
+    },
+    computed: {
+        isLoading() { return this.mailList.length !== this.emailNumber },
     },
     methods: {
         generateTenMail: function () {

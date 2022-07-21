@@ -48,10 +48,11 @@
 
         <h1 class="fw-bold m-4">Vue Email List</h1>
 
-        <ul class="list-group mb-2">
+        <i v-if="isLoading" class="fa solid fa-spinner fa-spinner fa-spin fa-5x mb-4"></i>
+        <ul class="list-group mb-2" v-else>
             <!-- // Bonus
             // Far comparire gli indirizzi email solamente quando sono stati tutti generati. -->
-            <li v-for="mail in this.mailList" v-if="mailList.length == 10" class="mb-2">
+            <li v-for="mail in this.mailList" class="mb-2">
                 {{ mail }}
             </li>
         </ul>
